@@ -24,7 +24,7 @@ const useCalculator = () => {
 
     switch(type) {
       case OperatorTypeEnum.BAGI:
-        res = valueContainer.filter(e => e !== null).reduce((acc, curVal) => (acc === null ? 1 : acc) / (curVal ? curVal : 1))
+        res = valueContainer.filter(e => e !== null).reduce((acc, curVal) => (acc === null ? 1 : acc) / (curVal === null ? 1 : curVal))
         setResult(res)
         return
       case OperatorTypeEnum.KALI:
