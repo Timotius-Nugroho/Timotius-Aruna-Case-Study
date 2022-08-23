@@ -5,8 +5,7 @@ import { OperatorTypeEnum } from './enums';
 import useCalculator from './hooks/useCalculator';
 
 function App() {
-  const { valueContainer, result, addOrRemoveValue, calculate, errorMsg } = useCalculator()
-  console.log(valueContainer)
+  const { result, addOrRemoveValue, calculate, errorMsg } = useCalculator()
 
   return (
     <div className="App">
@@ -29,7 +28,7 @@ function App() {
           </div>
         }
 
-        <h3>{"Hasil " + result}</h3>
+        <h3>{result !== null ? `Hasil ${result}` : "Tidak bisa menampilkan hasil"}</h3>
       </header>
     </div>
   );

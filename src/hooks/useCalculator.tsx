@@ -6,15 +6,10 @@ const useCalculator = () => {
   const [ result, setResult ] = useState<number | null>(null)
   const [ errorMsg, setErrorMsg ] = useState<string>("")
 
-  const addOrRemoveValue = (idx: number, target: number) => {
+  const addOrRemoveValue = (idx: number, target: number | null) => {
     const tmpContainer = [...valueContainer]
-    if (valueContainer[idx] === null) {
-      tmpContainer[idx] = target
-      setValueContainer(tmpContainer)
-    } else {
-      tmpContainer[idx] = null
-      setValueContainer(tmpContainer)
-    }
+    tmpContainer[idx] = target
+    setValueContainer(tmpContainer)
   }
 
   const calculate = (type: OperatorTypeEnum) => {

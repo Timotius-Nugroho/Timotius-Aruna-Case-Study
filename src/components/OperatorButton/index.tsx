@@ -6,19 +6,19 @@ const OperatorButton:FC<iOperatorButton> = ({ type, onCalculate }) => {
   switch (type) {
     case OperatorTypeEnum.BAGI:
       return(
-        <button style={{ height: "35px", width: "35px" }} onClick={()=>{onCalculate(OperatorTypeEnum.BAGI)}}>{"/"}</button>
+        <button aria-label="btn-bagi" style={{ height: "35px", width: "35px" }} onClick={()=>{onCalculate(OperatorTypeEnum.BAGI)}}>{"/"}</button>
       )
     case OperatorTypeEnum.KALI:
       return(
-        <button style={{ height: "35px", width: "35px" }} onClick={()=>{onCalculate(OperatorTypeEnum.KALI)}}>{"X"}</button>
+        <button aria-label="btn-kali" style={{ height: "35px", width: "35px" }} onClick={()=>{onCalculate(OperatorTypeEnum.KALI)}}>{"X"}</button>
       )
     case OperatorTypeEnum.KURANG:
       return(
-        <button style={{ height: "35px", width: "35px" }} onClick={()=>{onCalculate(OperatorTypeEnum.KURANG)}}>{"-"}</button>
+        <button aria-label="btn-kurang" style={{ height: "35px", width: "35px" }} onClick={()=>{onCalculate(OperatorTypeEnum.KURANG)}}>{"-"}</button>
       )
     case OperatorTypeEnum.TAMBAH:
       return(
-        <button style={{ height: "35px", width: "35px" }} onClick={()=>{onCalculate(OperatorTypeEnum.TAMBAH)}}>{"+"}</button>
+        <button aria-label="btn-tambah" style={{ height: "35px", width: "35px" }} onClick={()=>{onCalculate(OperatorTypeEnum.TAMBAH)}}>{"+"}</button>
       )
     default:
       return(
