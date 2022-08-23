@@ -5,7 +5,8 @@ import { OperatorTypeEnum } from './enums';
 import useCalculator from './hooks/useCalculator';
 
 function App() {
-  const { result, addOrRemoveValue, calculate, errorMsg } = useCalculator()
+  const { valueContainer, result, addOrRemoveValue, calculate, errorMsg } = useCalculator()
+  console.log(valueContainer)
 
   return (
     <div className="App">

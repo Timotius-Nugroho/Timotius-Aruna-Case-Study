@@ -29,7 +29,7 @@ const useCalculator = () => {
 
     switch(type) {
       case OperatorTypeEnum.BAGI:
-        res = valueContainer.reduce((acc, curVal) => (acc === null ? 1 : acc) / (curVal ? curVal : 1))
+        res = valueContainer.filter(e => e !== null).reduce((acc, curVal) => (acc === null ? 1 : acc) / (curVal ? curVal : 1))
         setResult(res)
         return
       case OperatorTypeEnum.KALI:
@@ -41,7 +41,7 @@ const useCalculator = () => {
         setResult(res)
         return
       case OperatorTypeEnum.KURANG:
-        res = valueContainer.reduce((acc, curVal) => (acc === null ? 0 : acc) - (curVal === null ? 0 : curVal))
+        res = valueContainer.filter(e => e !== null).reduce((acc, curVal) => (acc === null ? 0 : acc) - (curVal === null ? 0 : curVal))
         setResult(res)
         return
       default: 
